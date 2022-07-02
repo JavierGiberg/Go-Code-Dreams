@@ -1,0 +1,5 @@
+.container_sidebar{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
