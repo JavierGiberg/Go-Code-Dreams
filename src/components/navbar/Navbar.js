@@ -25,8 +25,8 @@ function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
-              Home
+            <a href="/products" className="nav-link">
+              Dream List
             </a>
           </li>
           <li className="nav-item">

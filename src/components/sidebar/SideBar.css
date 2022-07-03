@@ -1,5 +1,15 @@
 .container_sidebar{
     display: flex;
-    flex-direction: row;
-    text-align: center;
+    width: 100%;
+    flex-direction: column;
+}
+.item_img{
+    width: 100%;
+    align-items: center;
+    margin-top: 25px;
+}
+.item_data{
+    margin-top: 55px;
+    align-items: center;
+    color: rgb(255, 255, 255);
 }

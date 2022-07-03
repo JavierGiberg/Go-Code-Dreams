@@ -1,30 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Main.css";
+
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-const Maindata = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-  },
-];
 
 const Main = () => {
+  const [Maindata, setMaindata] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/products")
+      .then((res) => res.json())
+      .then((colle) => {
+        setMaindata(colle);
+      });
+  }, []);
+
   const [current, setCurrent] = useState(0);
   const length = Maindata.length;
 
@@ -52,12 +41,19 @@ const Main = () => {
           >
             {index === current && (
               <div>
-                <img
-                  src={Maindata.image}
-                  alt="travel image"
-                  className="image"
-                />
-                <h6>XXXXXXXXXXXXX</h6>
+                <img src={Maindata.image} alt="image" className="image" />
+                <div className="details_main">
+                  <h4 className="dream_pack">
+                    Dream package [---------------------------]
+                  </h4>
+                  <h4 className="price">Price 2500$</h4>
+                  <h3
+                    className="buy_button"
+                    onClick={() => new Audio("Fail.mp4").play()}
+                  >
+                    Buy package
+                  </h3>
+                </div>
               </div>
             )}
           </div>
@@ -67,4 +63,7 @@ const Main = () => {
   );
 };
 
+function playAudio(url) {
+  new Audio(url).play();
+}
 export default Main;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Profiles(props) {
   return props.profile.map((props, index) => (
     <div key={index}>
-      <li className="cards_item">
+      <li className="cards_item" onClick={() => new Audio("Fail.mp4").play()}>
         <Link className="cards_item_link" to={props.path}>
           <figure className="cards_item_pic-wrap">
             <img

@@ -13,7 +13,7 @@ li {
 }
 a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: large;
 }
 
@@ -36,6 +36,7 @@ a {
   align-items: center;
   justify-content: space-around;
   gap: 2rem;
+  
 }
 .nav-toggler {
   display: none;
@@ -47,21 +48,23 @@ a {
   background: rgb(255, 255, 255);
   transition: 0.3s ease-in;
 }
-
+.nav-brand{
+  color: rgb(255, 255, 255);
+}
 @media screen and (max-width: 768px) {
   .nav-toggler {
     display: block;
     cursor: pointer;
-    
+    z-index: 3;
   }
   .nav-menu {
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 29vh;
     right: 1.8vh;
     height: 53vh;
     width: 40vw;
-    background: rgba(91, 95, 90, 0.867);
+    background: black;
     flex-direction: column-reverse ;
     transform: translateX(100%);
     transition: 0.5s ease-in;
@@ -70,6 +73,7 @@ a {
 
 .nav-active {
   transform: translateX(0%);
+  
 }
 
 
@@ -95,7 +99,7 @@ a {
   
 @media (prefers-reduced-motion: no-preference) {
   .nav-logo {
-    
+    z-index: 3;
     animation: nav-logo-spin infinite 20s linear;
   }
 }
@@ -124,6 +128,7 @@ a {
 @media screen and (max-width: 568px) {
     .search-bar {
         display: none  
+        
       }
 }
 
