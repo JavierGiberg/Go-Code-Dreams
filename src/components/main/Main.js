@@ -63,7 +63,4 @@ const Main = () => {
   );
 };
 
-function playAudio(url) {
-  new Audio(url).play();
-}
 export default Main;

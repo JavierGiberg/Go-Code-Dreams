@@ -1,10 +1,11 @@
 import "./Home.css";
 import Footer from "../footer/Footer";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Navbar from "../navbar/Navbar";
 import Sidebar from "../sidebar/Sidebar";
 import Main from "../main/Main";
-function Home() {
+import { UserContext } from "../context/ProdactContex";
+function Home(props) {
   return (
     <div className="container">
       <video src="/video-1.mp4" autoPlay loop muted />
@@ -12,7 +13,7 @@ function Home() {
         <Navbar />
       </header>
       <aside>
-        <Sidebar />
+        <Sidebar profile={props.profile} />
       </aside>
 
       <main>
