@@ -15,7 +15,7 @@ function Profiles(props) {
       <Link to={props.path}>
         <li
           className="cards_item"
-          onClick={() => new Audio("Fail.mp4").play() && x(props)}
+          onClick={() => new Audio(props.sound).play() && x(props)}
         >
           <div className="cards_item_link">
             <figure className="cards_item_pic-wrap">

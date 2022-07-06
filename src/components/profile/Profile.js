@@ -5,7 +5,7 @@ function Profile(props) {
   return (
     <div className="cards">
       <video src="/video-1.mp4" autoPlay loop muted />
-      <h1 className="h1_items">Check out these EPIC Destinations!</h1>
+      <h1 className="h1_items">Choose you'r status</h1>
 
       <ul className="cards_items">
         <Profiles profile={props.profile} />

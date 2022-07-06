@@ -65,3 +65,8 @@
   
   grid-row:1/-1;
 }
+.whish_button{
+  grid-column-start: 2 ;
+  
+  grid-row:2/-1;
+}

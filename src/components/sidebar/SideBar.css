@@ -1,15 +1,24 @@
 .container_sidebar{
     display: flex;
-    width: 100%;
+    line-height: 30px;
+    
+}
+.item_card{
+    align-items: center;
+}
+.item_detiles{
+    display: flex;
+    color: aliceblue;
     flex-direction: column;
-}
-.item_img{
-    width: 100%;
     align-items: center;
-    margin-top: 25px;
+    
 }
-.item_data{
-    margin-top: 55px;
-    align-items: center;
-    color: rgb(255, 255, 255);
+.item_detiles1{
+    margin: 10px;
+}
+.item_detiles2{
+    margin: 10px;
+}
+.item_detiles3{
+    margin: 10px;
 }

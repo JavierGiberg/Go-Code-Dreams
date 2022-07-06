@@ -1,10 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useContext } from "react";
 import "./Main.css";
 
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import { UserContext } from "../context/ProdactContex";
 
 const Main = () => {
+  const { setProfile, packageg, setPackage, wish, setWish } =
+    useContext(UserContext);
+  const [pack, setPac] = useState(packageg);
   const [Maindata, setMaindata] = useState([]);
+
+  function x() {
+    setPackage(packageg + 1);
+  }
+  function y() {
+    setWish(wish + 1);
+  }
 
   useEffect(() => {
     fetch("http://localhost:8000/products")
@@ -49,9 +60,15 @@ const Main = () => {
                   <h4 className="price">Price 2500$</h4>
                   <h3
                     className="buy_button"
-                    onClick={() => new Audio("Fail.mp4").play()}
+                    onClick={() => new Audio("Fail.mp4").play() && x()}
                   >
                     Buy package
+                  </h3>
+                  <h3
+                    className="whish_button"
+                    onClick={() => new Audio("Fail.mp4").play() && y()}
+                  >
+                    Add to whish list
                   </h3>
                 </div>
               </div>
