@@ -5,15 +5,26 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import { UserContext } from "../context/ProdactContex";
 
 const Main = () => {
-  const { setProfile, packageg, setPackage, wish, setWish } =
-    useContext(UserContext);
-  const [pack, setPac] = useState(packageg);
+  const {
+    setProfile,
+    packabuy,
+    setpackabuy,
+    wish,
+    setWish,
+    bank,
+    setBank,
+    setMain,
+  } = useContext(UserContext);
+
   const [Maindata, setMaindata] = useState([]);
 
-  function x() {
-    setPackage(packageg + 1);
+  function buyPack(e) {
+    if (e.price <= bank) {
+      setpackabuy(packabuy + 1);
+      setBank(bank - e.price);
+    }
   }
-  function y() {
+  function putwish() {
     setWish(wish + 1);
   }
 
@@ -22,6 +33,7 @@ const Main = () => {
       .then((res) => res.json())
       .then((colle) => {
         setMaindata(colle);
+        setMain(colle);
       });
   }, []);
 
@@ -55,19 +67,13 @@ const Main = () => {
                 <img src={Maindata.image} alt="image" className="image" />
                 <div className="details_main">
                   <h4 className="dream_pack">
-                    Dream package [---------------------------]
+                    Dream package [{Maindata.details}]
                   </h4>
-                  <h4 className="price">Price 2500$</h4>
-                  <h3
-                    className="buy_button"
-                    onClick={() => new Audio("Fail.mp4").play() && x()}
-                  >
+                  <h4 className="price">Price {Maindata.price}$</h4>
+                  <h3 className="buy_button" onClick={() => buyPack(Maindata)}>
                     Buy package
                   </h3>
-                  <h3
-                    className="whish_button"
-                    onClick={() => new Audio("Fail.mp4").play() && y()}
-                  >
+                  <h3 className="whish_button" onClick={() => putwish()}>
                     Add to whish list
                   </h3>
                 </div>
@@ -81,3 +87,4 @@ const Main = () => {
 };
 
 export default Main;
+//() => new Audio("Fail.mp4").play() &&

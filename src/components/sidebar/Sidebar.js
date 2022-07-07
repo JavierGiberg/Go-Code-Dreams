@@ -4,10 +4,9 @@ import { UserContext } from "../context/ProdactContex";
 import "./SideBar.css";
 
 function Sidebar(props) {
-  const { setProfile, packageg, setPackage, wish, setWish } =
+  const { setProfile, packabuy, setpackabuy, wish, setWish, bank, setBank } =
     useContext(UserContext);
   const [pro] = useState(props.profile);
-  const [bank, setBank] = useState(0);
 
   function getSel(e) {
     setBank(e.bank);
@@ -26,7 +25,7 @@ function Sidebar(props) {
         </li>
         <div className="item_detiles">
           <h4 className="item_detiles1">Bank [{bank}$]</h4>
-          <h4 className="item_detiles2">package buy [{packageg}]</h4>
+          <h4 className="item_detiles2">package buy [{packabuy}]</h4>
           <h4 className="item_detiles3">wish list [{wish}]</h4>
           <button className="item_button_selery" onClick={() => getSel(props)}>
             Get My Sellery

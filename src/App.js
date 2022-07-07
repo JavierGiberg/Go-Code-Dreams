@@ -8,8 +8,10 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [profile, setProfile] = useState([]);
-  const [packageg, setPackage] = useState(0);
+  const [Maindata, setMain] = useState([]);
+  const [packabuy, setpackabuy] = useState(0);
   const [wish, setWish] = useState(0);
+  const [bank, setBank] = useState(0);
 
   useEffect(() => {
     fetch("http://localhost:8000/profile")
@@ -22,7 +24,16 @@ function App() {
   return (
     <Router>
       <UserContext.Provider
-        value={{ setProfile, packageg, setPackage, wish, setWish }}
+        value={{
+          setProfile,
+          packabuy,
+          setpackabuy,
+          wish,
+          setWish,
+          bank,
+          setBank,
+          setMain,
+        }}
       >
         <Routes>
           <Route path="/" element={<Profile profile={profile} />} />

@@ -8,7 +8,7 @@ import { UserContext } from "../context/ProdactContex";
 function Home(props) {
   return (
     <div className="container">
-      <video src="/video-1.mp4" autoPlay loop muted />
+      <video className="video" src="/video-1.mp4" autoPlay loop muted />
       <header>
         <Navbar />
       </header>
@@ -17,7 +17,7 @@ function Home(props) {
       </aside>
 
       <main>
-        <Main />
+        <Main packageg={props.packageg} />
       </main>
       <footer>
         <Footer />
