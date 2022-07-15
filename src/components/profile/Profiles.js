@@ -4,10 +4,11 @@ import { useContext } from "react";
 import { UserContext } from "../context/ProdactContex";
 
 function Profiles(props) {
-  const { setProfile } = useContext(UserContext);
+  const { setSidePro } = useContext(UserContext);
 
   function x(e) {
-    setProfile([e]);
+    console.log(e);
+    setSidePro(e);
   }
 
   return props.profile.map((props, index) => (

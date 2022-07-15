@@ -1,6 +1,6 @@
 .footer-container {
-  background-color: #000000;
- 
+
+ margin-top: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +15,7 @@
   text-align: center;
 
  
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .footer-subscription > p {

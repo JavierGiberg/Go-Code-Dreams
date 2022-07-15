@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar(props) {
   const [active, setActive] = useState("nav-menu");
   const [icon, setIcon] = useState("nav-toggler");
   const navToggle = () => {
@@ -13,6 +13,12 @@ function Navbar() {
       setIcon("nav-toggler toggle");
     } else setIcon("nav-toggler");
   };
+  function x() {
+    props.setx(false);
+  }
+  function y() {
+    props.setx(true);
+  }
   return (
     <div>
       <nav className="nav">
@@ -20,38 +26,45 @@ function Navbar() {
 
         <ul className={active}>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <a href="/home" className="nav-link">
               Home
             </a>
           </li>
           <li className="nav-item">
-            <a href="/products" className="nav-link">
-              Dream List
+            <a onClick={() => x()} className="nav-link">
+              Dream List 1
             </a>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
-              Home
+            <a onClick={() => y()} className="nav-link">
+              Dream List 2
             </a>
           </li>
         </ul>
-        <form className="search-bar">
-          <img
-            className="img-bar"
-            src="https://images.quik.co.il/general-assets/imgs/mobile/search_icon.svg"
-          />
-          <input type="search" placeholder="Search Dream" />
-        </form>
-        <div onClick={navToggle} className={icon}>
+        <select
+          className="search-bar"
+          onChange={(e) => props.select(e.target.value)}
+        >
+          <Filter filter={props.sortlist} />
+        </select>
+        {/* <div onClick={navToggle} className={icon}>
           <div className="line1"></div>
           <div className="line1"></div>
           <div className="line2"></div>
           <div className="line3"></div>
           <div className="line3"></div>
-        </div>
+        </div> */}
       </nav>
     </div>
   );
+}
+
+function Filter(props) {
+  return props.filter.map((colle, index) => (
+    <option key={index} value={colle.title}>
+      {colle.collection}
+    </option>
+  ));
 }
 
 export default Navbar;

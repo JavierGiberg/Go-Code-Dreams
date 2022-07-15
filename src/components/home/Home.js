@@ -1,23 +1,30 @@
 import "./Home.css";
 import Footer from "../footer/Footer";
-import { useContext, useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import Sidebar from "../sidebar/Sidebar";
 import Main from "../main/Main";
-import { UserContext } from "../context/ProdactContex";
+import Products from "../products/Products";
+import { useState } from "react";
+
 function Home(props) {
+  const [x, setx] = useState(true);
+
   return (
     <div className="container">
-      <video className="video" src="/video-1.mp4" autoPlay loop muted />
       <header>
-        <Navbar />
+        <Navbar
+          sortlist={props.sortlist}
+          select={props.select}
+          selected={props.selected}
+          setx={setx}
+        />
       </header>
       <aside>
-        <Sidebar profile={props.profile} />
+        <Sidebar card={props.card} profile={props.profile} />
       </aside>
-
-      <main>
-        <Main packageg={props.packageg} />
+      <main className="main">
+        {x ? <Main Maindata={props.Maindata} /> : <Products />}
       </main>
       <footer>
         <Footer />

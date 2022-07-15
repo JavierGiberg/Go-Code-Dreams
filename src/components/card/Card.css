@@ -1,0 +1,25 @@
+.card_side{
+    display: flex;
+    align-content: space-between;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.item_img{
+    display: flex;
+width: 100px;
+height: 100px;
+margin: 0%;
+padding: 10px;
+}
+.item_btn{
+
+    
+}
+.item_title{
+
+}

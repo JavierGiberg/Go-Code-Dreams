@@ -1,5 +1,6 @@
 .container_sidebar{
     display: flex;
+    flex-direction: column;
     line-height: 30px;
     
 }
@@ -8,7 +9,7 @@
 }
 .item_detiles{
     display: flex;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     flex-direction: column;
     align-items: center;
     
@@ -22,3 +23,16 @@
 .item_detiles3{
     margin: 10px;
 }
+.cards_item_img{
+    border-radius: 15px;
+}
+.cards_item_img:hover {
+    transform: scale(1.1);
+    
+  }
+  .item_shop_bag{
+    display: grid;
+  }
+  .cards_item_pic-wrap{
+    
+  }

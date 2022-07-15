@@ -2,10 +2,10 @@
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 2px;
     font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
-
+    
 }
 
 img {
@@ -19,18 +19,24 @@ header, aside, footer {
 }
 
 header {
-    
+    box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     font-size: 3rem;
 }
 
 aside {
-    
+    box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     
 }
 
 main {
-    margin: 1em 0;
     
+    box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
 }
 
 article {
@@ -40,6 +46,9 @@ article {
 
 footer {
    padding: 0;
+   box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
+   -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
 }
 
 
@@ -49,20 +58,22 @@ aside { grid-area: aside; }
 main { 
     grid-area: main;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(auto-fit, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
     grid-gap: 1em;
    
 }
 
 article {
     display: grid;
+    
     align-items: center;
     justify-content: center; 
 }
 footer { grid-area: footer; }
 
 .container {
+
     display: grid;
     grid-template-areas: 
         "header"
@@ -77,6 +88,7 @@ article:nth-of-type(3) {
 
 @media screen and (min-width:500px) {
     .container {
+        
         grid-template-areas: 
             "header header header header"
             "aside main main main"
