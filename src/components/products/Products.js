@@ -1,30 +1,30 @@
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../context/ProdactContex";
 import "./Products.css";
-function Products() {
-  const [Maindata, setMaindata] = useState([]);
-  const { packabuy, setpackabuy, wish, setWish, bank, setBank } =
+function Products(props) {
+  const { setCard, card, packabuy, setpackabuy, wish, setWish, bank, setBank } =
     useContext(UserContext);
 
   function buyPack(e) {
     if (e.price <= bank) {
       setpackabuy(packabuy + 1);
       setBank(bank - e.price);
+      setCard([
+        ...card,
+        {
+          image: e.image,
+          price: e.price,
+          category: e.category,
+          details: e.details,
+        },
+      ]);
     }
   }
   function putwish() {
     setWish(wish + 1);
   }
 
-  useEffect(() => {
-    fetch("http://localhost:8000/products")
-      .then((res) => res.json())
-      .then((colle) => {
-        setMaindata(colle);
-      });
-  }, []);
-
-  return Maindata.map((Maindata, index) => {
+  return props.Maindata.map((Maindata, index) => {
     return (
       <div className="container_products" key={index}>
         <div>

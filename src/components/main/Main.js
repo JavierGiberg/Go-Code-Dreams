@@ -21,7 +21,6 @@ const Main = (props) => {
           details: e.details,
         },
       ]);
-      console.log(card);
     }
   }
   function putwish() {

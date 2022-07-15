@@ -9,7 +9,6 @@ function Sidebar(props) {
 
   function getSel(e) {
     if (bank == 0) setBank(e.bank);
-    console.log(props.card);
   }
 
   return (

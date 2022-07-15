@@ -2,7 +2,8 @@ import "./Card.css";
 import { useContext } from "react";
 import { UserContext } from "../context/ProdactContex";
 function Card(props) {
-  const { setCard, card, bank, setBank } = useContext(UserContext);
+  const { setCard, card, bank, setBank, setpackabuy, packabuy } =
+    useContext(UserContext);
 
   function deleteCard(e) {
     var toRemove = e;
@@ -11,6 +12,7 @@ function Card(props) {
       card.splice(index, 1);
       setCard(card);
       setBank(bank + e.price);
+      setpackabuy(packabuy - 1);
     }
   }
   return props.card.map((props, index) => (
