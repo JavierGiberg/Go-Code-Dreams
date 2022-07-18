@@ -25,12 +25,13 @@ function Home(props) {
       </aside>
       <main className="main">
         <h1>Sell Dreams</h1>
-
-        {x ? (
-          <Main Maindata={props.Maindata} />
-        ) : (
-          <Products Maindata={props.Maindata} />
-        )}
+        <div className="item_main_product">
+          {x ? (
+            <Main Maindata={props.Maindata} />
+          ) : (
+            <Products Maindata={props.Maindata} />
+          )}
+        </div>
       </main>
       <footer>
         <Footer />

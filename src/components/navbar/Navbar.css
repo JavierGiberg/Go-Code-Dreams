@@ -1,11 +1,6 @@
 
 
-*,
-*::after,
-*::before {
-  margin: 0;
- 
-}
+
 
 
 li {
@@ -50,6 +45,7 @@ a {
 }
 .nav-brand{
   color: rgb(0, 0, 0);
+  
 }
 @media screen and (max-width: 768px) {
   .nav-toggler {
@@ -113,6 +109,10 @@ a {
     .search-bar {
         display: none  
         
+      }
+      .nav-brand{
+       
+        display: none;
       }
 }
 

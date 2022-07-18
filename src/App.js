@@ -68,42 +68,44 @@ function App() {
     }
   };
   return (
-    <Router>
-      <UserContext.Provider
-        value={{
-          sidePro,
-          setSidePro,
-          packabuy,
-          setpackabuy,
-          wish,
-          setWish,
-          bank,
-          setBank,
-          Maindata,
-          setMain,
-          card,
-          setCard,
-        }}
-      >
-        <Routes>
-          <Route path="/" element={<Profile profile={profile} />} />
-          <Route
-            path="/home/*"
-            element={
-              <Home
-                sortlist={sortlist}
-                select={select}
-                selected={selected}
-                Maindata={Maindata}
-                card={card}
-                profile={profile}
-              />
-            }
-          />
-          <Route path="/products" />
-        </Routes>
-      </UserContext.Provider>
-    </Router>
+    <div className="app_container">
+      <Router>
+        <UserContext.Provider
+          value={{
+            sidePro,
+            setSidePro,
+            packabuy,
+            setpackabuy,
+            wish,
+            setWish,
+            bank,
+            setBank,
+            Maindata,
+            setMain,
+            card,
+            setCard,
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Profile profile={profile} />} />
+            <Route
+              path="/home/*"
+              element={
+                <Home
+                  sortlist={sortlist}
+                  select={select}
+                  selected={selected}
+                  Maindata={Maindata}
+                  card={card}
+                  profile={profile}
+                />
+              }
+            />
+            <Route path="/products" />
+          </Routes>
+        </UserContext.Provider>
+      </Router>
+    </div>
   );
 }
 

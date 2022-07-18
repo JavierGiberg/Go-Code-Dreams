@@ -26,8 +26,8 @@ function Navbar(props) {
 
         <ul className={active}>
           <li className="nav-item">
-            <Button href="/home" className="nav-link">
-              Home
+            <Button href="/" className="nav-link">
+              Chacnge Status
             </Button>
           </li>
           <li className="nav-item">

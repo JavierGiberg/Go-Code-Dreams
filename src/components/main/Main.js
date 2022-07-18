@@ -55,7 +55,7 @@ const Main = (props) => {
         <div>
           {props.Maindata.map((Maindata, index) => {
             return (
-              <div key={index}>
+              <div className="container_main_map" key={index}>
                 <div className={index === current ? "slide active" : "slide"}>
                   {index === current && (
                     <div>
@@ -83,18 +83,18 @@ const Main = (props) => {
                         >
                           whish list
                         </Button>
+                        <Typography component="legend">Rating</Typography>
+                        <StyledRating
+                          name="customized-color"
+                          defaultValue={2}
+                          getLabelText={(value: number) =>
+                            `${value} Heart${value !== 1 ? "s" : ""}`
+                          }
+                          precision={0.5}
+                          icon={<FavoriteIcon fontSize="inherit" />}
+                          emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+                        />
                       </div>
-                      <Typography component="legend">Rating</Typography>
-                      <StyledRating
-                        name="customized-color"
-                        defaultValue={2}
-                        getLabelText={(value: number) =>
-                          `${value} Heart${value !== 1 ? "s" : ""}`
-                        }
-                        precision={0.5}
-                        icon={<FavoriteIcon fontSize="inherit" />}
-                        emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
-                      />
                     </div>
                   )}
                 </div>

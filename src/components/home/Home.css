@@ -33,7 +33,8 @@ aside {
 }
 
 main {
-    
+    display: flex;
+    align-content: center;
     box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -109,7 +110,15 @@ article:nth-of-type(3) {
     main {
         margin: 0;
         display: flex;
-        flex-wrap: wrap ;
+        flex-direction: column;
+        align-items: center;
+      
+        width: 100%;
+      }
+      .item_main_product{
+        display: flex;
+        flex-wrap: wrap;
+       margin-left: 0px; 
       }
     
     article:nth-of-type(3) {
