@@ -6,12 +6,15 @@
 }
 .item_card{
     align-items: center;
+    border-top:20px solid rgba(0, 21, 255, 0.821) ;
 }
 .item_detiles{
     display: flex;
     color: rgb(0, 0, 0);
     flex-direction: column;
     align-items: center;
+    border-bottom:20px solid rgba(0, 21, 255, 0.821)  ;
+    border-top:20px solid rgba(0, 21, 255, 0.821) ;
     
 }
 .item_detiles1{
@@ -25,6 +28,7 @@
 }
 .cards_item_img{
     border-radius: 15px;
+   
 }
 .cards_item_img:hover {
     transform: scale(1.1);
@@ -35,4 +39,17 @@
   }
   .cards_item_pic-wrap{
     
+  }
+  .item_card_buy{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+  }
+  .item_title_sidebar{
+
+  }
+  .container_sidebar h1{
+    color: rgb(0, 0, 0);
+    margin: 25px;
   }

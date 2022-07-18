@@ -1,6 +1,12 @@
+import { Button } from "@mui/material";
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../context/ProdactContex";
 import "./Products.css";
+import { styled } from "@mui/material/styles";
+import Rating from "@mui/material/Rating";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import Typography from "@mui/material/Typography";
 function Products(props) {
   const { setCard, card, packabuy, setpackabuy, wish, setWish, bank, setBank } =
     useContext(UserContext);
@@ -34,20 +40,38 @@ function Products(props) {
           <div className="details_main_products">
             <h4 className="dream_pack">Dream package [{Maindata.details}]</h4>
             <h4 className="price_products">Price {Maindata.price}$</h4>
-            <h3
+            <Button
               className="buy_button_products"
               onClick={() => buyPack(Maindata)}
             >
               Buy package
-            </h3>
-            <h3 className="whish_button_products" onClick={() => putwish()}>
+            </Button>
+            <Button className="whish_button_products" onClick={() => putwish()}>
               Add to whish list
-            </h3>
+            </Button>
+            <Typography component="legend">Rating</Typography>
+            <StyledRating
+              name="customized-color"
+              defaultValue={2}
+              getLabelText={(value: number) =>
+                `${value} Heart${value !== 1 ? "s" : ""}`
+              }
+              precision={0.5}
+              icon={<FavoriteIcon fontSize="inherit" />}
+              emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+            />
           </div>
         </div>
       </div>
     );
   });
 }
-
+const StyledRating = styled(Rating)({
+  "& .MuiRating-iconFilled": {
+    color: "#ff6d75",
+  },
+  "& .MuiRating-iconHover": {
+    color: "#ff3d47",
+  },
+});
 export default Products;

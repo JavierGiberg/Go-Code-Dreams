@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-
+import Button from "@mui/material/Button";
 function Navbar(props) {
   const [active, setActive] = useState("nav-menu");
   const [icon, setIcon] = useState("nav-toggler");
@@ -26,19 +26,19 @@ function Navbar(props) {
 
         <ul className={active}>
           <li className="nav-item">
-            <a href="/home" className="nav-link">
+            <Button href="/home" className="nav-link">
               Home
-            </a>
+            </Button>
           </li>
           <li className="nav-item">
-            <a onClick={() => x()} className="nav-link">
+            <Button onClick={() => x()} className="nav-link">
               Dream List 1
-            </a>
+            </Button>
           </li>
           <li className="nav-item">
-            <a onClick={() => y()} className="nav-link">
+            <Button onClick={() => y()} className="nav-link">
               Dream List 2
-            </a>
+            </Button>
           </li>
         </ul>
         <select
@@ -47,13 +47,6 @@ function Navbar(props) {
         >
           <Filter filter={props.sortlist} />
         </select>
-        {/* <div onClick={navToggle} className={icon}>
-          <div className="line1"></div>
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
-          <div className="line3"></div>
-        </div> */}
       </nav>
     </div>
   );

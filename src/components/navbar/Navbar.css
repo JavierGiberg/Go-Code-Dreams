@@ -58,16 +58,7 @@ a {
     z-index: 3;
   }
   .nav-menu {
-    position: fixed;
-    z-index: 3;
-    top: 29vh;
-    right: 5.8vh;
-    height: 53vh;
-    width: 40vw;
-    background: black;
-    flex-direction: column-reverse ;
-    transform: translateX(100%);
-    transition: 0.5s ease-in;
+  
   }
 }
 

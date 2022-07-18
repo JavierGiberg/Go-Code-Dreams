@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/ProdactContex";
 import Card from "../card/Card";
 import "./SideBar.css";
-
+import Button from "@mui/material/Button";
 function Sidebar(props) {
   const { sidePro, card, packabuy, wish, bank, setBank } =
     useContext(UserContext);
@@ -13,6 +13,7 @@ function Sidebar(props) {
 
   return (
     <div className="container_sidebar">
+      <h1>Profile</h1>
       <div className="item_card">
         <li>
           <figure className="cards_item_pic-wrap">
@@ -26,47 +27,20 @@ function Sidebar(props) {
           <h4 className="item_detiles1">Bank [{bank}$]</h4>
           <h4 className="item_detiles2">package buy [{packabuy}]</h4>
           <h4 className="item_detiles3">wish list [{wish}]</h4>
-          <button
+          <Button
             className="item_button_selery"
             onClick={() => getSel(sidePro)}
           >
             Get My Sellery
-          </button>
+          </Button>
         </div>
       </div>
       <div className="item_card_buy">
-        <h2>Card</h2>
-        <Card card={card} />
+        <h1>Card</h1>
+        {card.length ? <Card card={card} /> : <h1>Empty card</h1>}
       </div>
     </div>
   );
 }
-
-// return props.card.profile.map((props, index) => (
-//   <div className="container_sidebar" key={index}>
-//     <div className="item_card">
-//       <li>
-//         <figure className="cards_item_pic-wrap">
-//           <img className="cards_item_img" alt="Image" src={props.src} />
-//         </figure>
-//         <div className="cards_item_info">
-//           <h5 className="cards_item_text">{props.text}</h5>
-//         </div>
-//       </li>
-//       <div className="item_detiles">
-//         <h4 className="item_detiles1">Bank [{bank}$]</h4>
-//         <h4 className="item_detiles2">package buy [{packabuy}]</h4>
-//         <h4 className="item_detiles3">wish list [{wish}]</h4>
-//         <button className="item_button_selery" onClick={() => getSel(props)}>
-//           Get My Sellery
-//         </button>
-//       </div>
-//     </div>
-//     <div>
-//       <Card card={props.card} />
-//     </div>
-//   </div>
-// ));
-// }
 
 export default Sidebar;

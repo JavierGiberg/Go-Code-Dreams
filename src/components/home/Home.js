@@ -24,6 +24,8 @@ function Home(props) {
         <Sidebar card={props.card} profile={props.profile} />
       </aside>
       <main className="main">
+        <h1>Sell Dreams</h1>
+
         {x ? (
           <Main Maindata={props.Maindata} />
         ) : (

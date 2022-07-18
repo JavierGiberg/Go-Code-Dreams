@@ -38,6 +38,31 @@
    
   }
   
+
+.details_main_products{
+  display: grid;
+ 
+  grid-template-columns: 550px 150px;
+  grid-template-rows: repeat(2,50px);
+  }
+  .dream_pack_products{
+  grid-column-start: 1 / 2;
+  grid-row: 1;
+  }
+  .price_products{
+  grid-column-start: 1 / 2;
+  grid-row: 2;
+  }
+  .buy_button_products{
+  grid-column-start: 2 ;
+  
+  grid-row:1/-1;
+  }
+  .whish_button_products{
+  grid-column-start: 2 ;
+  
+  grid-row:2/-1;
+  }
 }
 
 
@@ -64,8 +89,9 @@
 }
 
 .slide {
-  opacity: 0;
+  
   transition-duration: 1s ease;
+  margin-left: 15px;
 }
 
 .slide.active {
@@ -76,7 +102,7 @@
 .details_main{
   display: grid;
   margin-top: 50px;
-  grid-template-columns: 550px 150px;
+  grid-template-columns: 220px 150px;
   grid-template-rows: repeat(2,50px);
 }
 .dream_pack{

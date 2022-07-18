@@ -1,8 +1,13 @@
 import React, { useState, useContext } from "react";
 import "./Main.css";
-
+import Button from "@mui/material/Button";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import { UserContext } from "../context/ProdactContex";
+import { styled } from "@mui/material/styles";
+import Rating from "@mui/material/Rating";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import Typography from "@mui/material/Typography";
 
 const Main = (props) => {
   const { setCard, card, packabuy, setpackabuy, wish, setWish, bank, setBank } =
@@ -66,16 +71,30 @@ const Main = (props) => {
                           Dream package [{Maindata.details}]
                         </h4>
                         <h4 className="price">Price {Maindata.price}$</h4>
-                        <h3
+                        <Button
                           className="buy_button"
                           onClick={() => buyPack(Maindata)}
                         >
                           Buy package
-                        </h3>
-                        <h3 className="whish_button" onClick={() => putwish()}>
-                          Add to whish list
-                        </h3>
+                        </Button>
+                        <Button
+                          className="whish_button"
+                          onClick={() => putwish()}
+                        >
+                          whish list
+                        </Button>
                       </div>
+                      <Typography component="legend">Rating</Typography>
+                      <StyledRating
+                        name="customized-color"
+                        defaultValue={2}
+                        getLabelText={(value: number) =>
+                          `${value} Heart${value !== 1 ? "s" : ""}`
+                        }
+                        precision={0.5}
+                        icon={<FavoriteIcon fontSize="inherit" />}
+                        emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+                      />
                     </div>
                   )}
                 </div>
@@ -87,6 +106,13 @@ const Main = (props) => {
     </div>
   );
 };
-
+const StyledRating = styled(Rating)({
+  "& .MuiRating-iconFilled": {
+    color: "#ff6d75",
+  },
+  "& .MuiRating-iconHover": {
+    color: "#ff3d47",
+  },
+});
 export default Main;
 //() => new Audio("Fail.mp4").play() &&
