@@ -21,14 +21,12 @@ function Card(props) {
     }
   }
   return props.card.map((props, index) => (
-    <div className="card_side" key={index}>
-      <div className="item_img">
+    <div className="card_side_container" key={index}>
+      <div className="card_side_img">
         <img src={props.image} />
       </div>
-      <div className="item_title">
-        <h3>{props.category}</h3>
-      </div>
-      <div className="">
+      <h3>{props.category}</h3>
+      <div className="card_side_btn">
         <Button
           onClick={() => deleteCard(props)}
           variant="outlined"

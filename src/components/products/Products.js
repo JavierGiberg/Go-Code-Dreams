@@ -35,7 +35,7 @@ function Products(props) {
       <div className="container_products" key={index}>
         <div>
           <div className="item_pic_products">
-            <img src={Maindata.image} alt="image" className="image" />
+            <img src={Maindata.image} alt="image" className="image_products" />
           </div>
           <div className="details_main_products">
             <h4 className="dream_pack">Dream package [{Maindata.details}]</h4>

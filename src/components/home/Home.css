@@ -1,52 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;0,900;1,600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0px;
-    font-family: 'Nunito', sans-serif;
-    box-sizing: border-box;
+
+
+.header, .aside, .footer {
     
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-header, aside, footer {
-    padding: 1rem;
     z-index: 1;
 }
 
-header {
+.header {
     box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     font-size: 3rem;
 }
 
-aside {
+.aside {
     box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     
 }
 
-main {
+.main {
     display: flex;
     align-content: center;
+    
     box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
 }
 
-article {
-    
-    text-align: center;
-}
 
-footer {
-   padding: 0;
+
+.footer {
+ 
    box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
@@ -60,9 +46,9 @@ footer {
   }
 
 
-header { grid-area: header; }
-aside { grid-area: aside; }
-main { 
+.header { grid-area: header; }
+.aside { grid-area: aside; }
+.main { 
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(auto-fit, 1fr));
@@ -71,13 +57,7 @@ main {
    
 }
 
-/* article {
-    display: grid;
-    
-    align-items: center;
-    justify-content: center; 
-} */
-footer { grid-area: footer; }
+.footer { grid-area: footer; }
 
 .container {
 
@@ -102,17 +82,17 @@ article:nth-of-type(3) {
             "aside main main main"
             "footer footer footer footer";
     }
-    aside {
+    .aside {
       width: 100%;
       margin-right: 1em;  
     }
     
-    main {
+    .main {
         margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-      
+     
         width: 100%;
       }
       .item_main_product{

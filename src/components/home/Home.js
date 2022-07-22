@@ -12,18 +12,18 @@ function Home(props) {
 
   return (
     <div className="container">
-      <header>
+      <div className="header">
         <Navbar
           sortlist={props.sortlist}
           select={props.select}
           selected={props.selected}
           setx={setx}
         />
-      </header>
-      <aside>
+      </div>
+      <div className="aside">
         <Sidebar card={props.card} profile={props.profile} />
-      </aside>
-      <main className="main">
+      </div>
+      <div className="main">
         <h1>Sell Dreams</h1>
         <div className="item_main_product">
           {x ? (
@@ -32,10 +32,10 @@ function Home(props) {
             <Products Maindata={props.Maindata} />
           )}
         </div>
-      </main>
-      <footer>
+      </div>
+      <div className="footer">
         <Footer />
-      </footer>
+      </div>
     </div>
   );
 }

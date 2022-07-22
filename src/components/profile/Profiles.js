@@ -12,25 +12,21 @@ function Profiles(props) {
   }
 
   return props.profile.map((props, index) => (
-    <div key={index}>
+    <div className="profiles_container" key={index}>
       <Link to={props.path}>
-        <li
-          className="cards_item"
-          onClick={() => new Audio(props.sound).play() && x(props)}
-        >
-          <div className="cards_item_link">
-            <figure className="cards_item_pic-wrap">
+        <div onClick={() => new Audio(props.sound).play() && x(props)}>
+          <div className="profile_item_link">
+            <div className="profile_item_pic-wrap">
               <img
-                className="cards_item_img"
-                alt="Travel Image"
+                className="profile_item_img"
+                alt="Image Status"
                 src={props.src}
               />
-            </figure>
-            <div className="cards_item_info">
-              <h5 className="cards_item_text">{props.text}</h5>
             </div>
+
+            <h5 className="profile_item_text">{props.text}</h5>
           </div>
-        </li>
+        </div>
       </Link>
     </div>
   ));

@@ -1,55 +1,33 @@
 .container_sidebar{
     display: flex;
     flex-direction: column;
-    line-height: 30px;
-    
-}
-.item_card{
     align-items: center;
-    border-top:20px solid rgba(0, 21, 255, 0.821) ;
+    max-width: 100%;
+    max-height: 100%;
+    
+    
 }
-.item_detiles{
+.sidebar_profile_img{
+    max-width: 100%;
+    max-height: 100%;
+    border-top:10px solid rgba(0, 21, 255, 0.821) ;
+}
+.sidebar_item_img{
+    max-width: 200px;
+    max-height: 200px;
+}
+.sidebar_item_detiles{
+    
+    border-top:10px solid rgba(0, 21, 255, 0.821) ;
+}
+.sidebar_item_buy{
     display: flex;
-    color: rgb(0, 0, 0);
+    
     flex-direction: column;
-    align-items: center;
-    border-bottom:20px solid rgba(0, 21, 255, 0.821)  ;
-    border-top:20px solid rgba(0, 21, 255, 0.821) ;
-    
+   align-items: center;
+   border-top: 10px solid rgba(0, 21, 255, 0.821) ;
+   border-bottom: 10px solid rgba(0, 21, 255, 0.821) ;
+   width: 90%;
+    height: 90%;
 }
-.item_detiles1{
-    margin: 10px;
-}
-.item_detiles2{
-    margin: 10px;
-}
-.item_detiles3{
-    margin: 10px;
-}
-.cards_item_img{
-    border-radius: 15px;
-   
-}
-.cards_item_img:hover {
-    transform: scale(1.1);
-    
-  }
-  .item_shop_bag{
-    display: grid;
-  }
-  .cards_item_pic-wrap{
-    
-  }
-  .item_card_buy{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    
-  }
-  .item_title_sidebar{
 
-  }
-  .container_sidebar h1{
-    color: rgb(0, 0, 0);
-    margin: 25px;
-  }

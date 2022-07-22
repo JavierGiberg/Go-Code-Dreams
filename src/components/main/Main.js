@@ -59,7 +59,7 @@ const Main = (props) => {
                 <div className={index === current ? "slide active" : "slide"}>
                   {index === current && (
                     <div>
-                      <div className="item_pic">
+                      <div className="main_item_pic">
                         <img
                           src={Maindata.image}
                           alt="image"
@@ -67,22 +67,23 @@ const Main = (props) => {
                         />
                       </div>
                       <div className="details_main">
-                        <h4 className="dream_pack">
+                        <h4 className="main_dream_pack">
                           Dream package [{Maindata.details}]
                         </h4>
                         <h4 className="price">Price {Maindata.price}$</h4>
+                        <br />
                         <Button
-                          className="buy_button"
+                          variant="outlined"
                           onClick={() => buyPack(Maindata)}
                         >
                           Buy package
                         </Button>
-                        <Button
-                          className="whish_button"
-                          onClick={() => putwish()}
-                        >
-                          whish list
+                        <br />
+
+                        <Button variant="outlined" onClick={() => putwish()}>
+                          add to whish list
                         </Button>
+                        <br />
                         <Typography component="legend">Rating</Typography>
                         <StyledRating
                           name="customized-color"

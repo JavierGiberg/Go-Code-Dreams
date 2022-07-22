@@ -3,13 +3,12 @@ import Profiles from "./Profiles";
 
 function Profile(props) {
   return (
-    <div className="cards">
-      <video src="/Wingsuit.mp4" autoPlay loop muted />
-      <h1 className="h1_items">Choose you'r status</h1>
+    <div className="profile_container">
+      <h1 className="profile_h1_items">Choose you'r status</h1>
 
-      <ul className="cards_items">
+      <div className="profile_item">
         <Profiles profile={props.profile} />
-      </ul>
+      </div>
     </div>
   );
 }
