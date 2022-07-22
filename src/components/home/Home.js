@@ -1,35 +1,63 @@
 import "./Home.css";
 import Footer from "../footer/Footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import Sidebar from "../sidebar/Sidebar";
 import Main from "../main/Main";
 import Products from "../products/Products";
+import AddDreams from "../addDreams/AddDreams";
 import { useState } from "react";
+import Pop from "../pop/Pop";
+import { Button } from "@mui/material";
+import Icon from "@mui/material/Icon";
 
 function Home(props) {
-  const [x, setx] = useState(true);
+  const [css, setCss] = useState(true);
+  const [pop, setPop] = useState(false);
+  const [addToDreams, setAddToDreams] = useState(false);
+
+  function AddDreamsFun(e) {
+    setAddToDreams(true);
+  }
 
   return (
     <div className="container">
+      {addToDreams && (
+        <AddDreams
+          setMain={props.setMain}
+          Maindata={props.Maindata}
+          setAddToDreams={setAddToDreams}
+        />
+      )}
+      {pop && <Pop setPop={setPop} />}
       <div className="header">
         <Navbar
           sortlist={props.sortlist}
           select={props.select}
           selected={props.selected}
-          setx={setx}
+          setCss={setCss}
         />
       </div>
       <div className="aside">
         <Sidebar card={props.card} profile={props.profile} />
       </div>
       <div className="main">
-        <h1>Sell Dreams</h1>
+        <div className="main_title">
+          <h1 className="main_title_h1">Sell Dreams</h1>
+
+          <Button
+            className="main_title_btn"
+            onClick={() => {
+              AddDreamsFun();
+            }}
+          >
+            Add you Dreams <Icon color="primary">add_circle</Icon>{" "}
+          </Button>
+        </div>
         <div className="item_main_product">
-          {x ? (
-            <Main Maindata={props.Maindata} />
+          {css ? (
+            <Main Maindata={props.Maindata} setPop={setPop} />
           ) : (
-            <Products Maindata={props.Maindata} />
+            <Products Maindata={props.Maindata} setPop={setPop} />
           )}
         </div>
       </div>

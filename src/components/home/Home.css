@@ -1,5 +1,11 @@
 
+.main_title ,.main_title_btn,.main_title_h1 {
+    display: flex;
+    align-content: center;
+    
+    width: 100%;
 
+}
 
 .header, .aside, .footer {
     

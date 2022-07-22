@@ -15,6 +15,7 @@ function Products(props) {
     if (e.price <= bank) {
       setpackabuy(packabuy + 1);
       setBank(bank - e.price);
+
       setCard([
         ...card,
         {
@@ -24,6 +25,8 @@ function Products(props) {
           details: e.details,
         },
       ]);
+    } else {
+      props.setPop(true);
     }
   }
   function putwish() {

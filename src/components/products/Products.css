@@ -17,38 +17,20 @@
     border-radius: 10px;
     margin-top: 50px;
   }
-  .item_pic_products{
-   
-   
-  }
-  
-
 .details_main_products{
   display: flex;
   flex-direction: column;
   margin-top: 50px;
 }
-.dream_pack_products{
- 
-}
-.price_products{
- 
-}
-.buy_button_products{
-  
-}
-.whish_button_products{
-
-}
-
 }
 .container_products{
-       
+  box-shadow: 0 6px 20px rgba(8, 81, 217, 0.567);
       display: flex;
-      
+     border-radius: 15px;
       justify-content: center;
      align-items: center;
      align-content: center;
+     margin: 10px;
 }
 .image_products {
   
@@ -75,16 +57,4 @@
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-}
-.dream_pack_products{
-
-}
-.price_products{
-
-}
-.buy_button_products{
- 
-}
-.whish_button_products{
-  
 }

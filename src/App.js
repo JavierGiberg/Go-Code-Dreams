@@ -4,7 +4,7 @@ import { UserContext } from "./components/context/ProdactContex";
 import Profile from "./components/profile/Profile";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [profile, setProfile] = useState([]);
@@ -60,7 +60,7 @@ function App() {
 
   const Filter = (category) => {
     let temp = productTemp;
-    if (!(category == "All-collection")) {
+    if (!(category === "All-collection")) {
       temp = productTemp.filter((pordu) => pordu.category === category);
       setMain(temp);
     } else {
@@ -98,6 +98,7 @@ function App() {
                   Maindata={Maindata}
                   card={card}
                   profile={profile}
+                  setMain={setMain}
                 />
               }
             />

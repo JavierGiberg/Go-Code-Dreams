@@ -9,7 +9,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Typography from "@mui/material/Typography";
 
-const Main = (props) => {
+function Main(props) {
   const { setCard, card, packabuy, setpackabuy, wish, setWish, bank, setBank } =
     useContext(UserContext);
 
@@ -26,6 +26,8 @@ const Main = (props) => {
           details: e.details,
         },
       ]);
+    } else {
+      props.setPop(true);
     }
   }
   function putwish() {
@@ -70,20 +72,19 @@ const Main = (props) => {
                         <h4 className="main_dream_pack">
                           Dream package [{Maindata.details}]
                         </h4>
-                        <h4 className="price">Price {Maindata.price}$</h4>
-                        <br />
+                        <h6 className="price">Price {Maindata.price}$</h6>
+
                         <Button
                           variant="outlined"
                           onClick={() => buyPack(Maindata)}
                         >
                           Buy package
                         </Button>
-                        <br />
 
                         <Button variant="outlined" onClick={() => putwish()}>
                           add to whish list
                         </Button>
-                        <br />
+
                         <Typography component="legend">Rating</Typography>
                         <StyledRating
                           name="customized-color"
@@ -106,7 +107,7 @@ const Main = (props) => {
       </section>
     </div>
   );
-};
+}
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
     color: "#ff6d75",

@@ -13,11 +13,11 @@ function Navbar(props) {
       setIcon("nav-toggler toggle");
     } else setIcon("nav-toggler");
   };
-  function x() {
-    props.setx(false);
+  function f() {
+    props.setCss(false);
   }
-  function y() {
-    props.setx(true);
+  function t() {
+    props.setCss(true);
   }
   return (
     <div>
@@ -31,13 +31,13 @@ function Navbar(props) {
             </Button>
           </li>
           <li className="nav-item">
-            <Button onClick={() => x()} className="nav-link">
-              Dream List 1
+            <Button onClick={() => f()} className="nav-link">
+              css 1
             </Button>
           </li>
           <li className="nav-item">
-            <Button onClick={() => y()} className="nav-link">
-              Dream List 2
+            <Button onClick={() => t()} className="nav-link">
+              css 2
             </Button>
           </li>
         </ul>

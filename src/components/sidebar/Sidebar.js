@@ -27,7 +27,7 @@ function Sidebar(props) {
       </div>
 
       <div className="sidebar_item_buy">
-        <h1>Card</h1>
+        <h1>Basket Dreams</h1>
         {card.length ? <Card card={card} /> : <h1>Empty card</h1>}
       </div>
     </div>
