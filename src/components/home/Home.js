@@ -35,6 +35,7 @@ function Home(props) {
           select={props.select}
           selected={props.selected}
           setCss={setCss}
+          css={css}
         />
       </div>
       <div className="aside">

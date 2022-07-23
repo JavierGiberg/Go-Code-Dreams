@@ -5,11 +5,15 @@
    width: 100%;
    display: grid;
    place-items:center;
-   
+   position: fixed;
+   overflow-x: hidden;
+   overflow-y: hidden; 
 }
 
 .silder_trak{
    display: flex;
+   
+   width: calc(10px * 18);
     animation: scroll 50s linear infinite;
   
 }
@@ -23,7 +27,7 @@
     display: flex;
     align-items: center;
     padding: 15px;
-    perspective: 100px;
+    /* perspective: 100px; */
   
 }
 img{
@@ -58,6 +62,7 @@ img :hover{
 }
 
 @keyframes scroll{
+    
     0%{
         transform: translateX(0);
     }

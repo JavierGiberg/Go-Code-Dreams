@@ -7,7 +7,6 @@ function Profiles(props) {
   const { setSidePro } = useContext(UserContext);
 
   function x(e) {
-    console.log(e);
     setSidePro(e);
   }
 

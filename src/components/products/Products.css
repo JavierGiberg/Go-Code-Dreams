@@ -24,6 +24,7 @@
 }
 }
 .container_products{
+
   box-shadow: 0 6px 20px rgba(8, 81, 217, 0.567);
       display: flex;
      border-radius: 15px;
@@ -31,6 +32,8 @@
      align-items: center;
      align-content: center;
      margin: 10px;
+   
+     
 }
 .image_products {
   
