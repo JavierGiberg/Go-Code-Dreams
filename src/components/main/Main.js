@@ -117,4 +117,3 @@ const StyledRating = styled(Rating)({
   },
 });
 export default Main;
-//() => new Audio("Fail.mp4").play() &&

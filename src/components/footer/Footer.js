@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.css";
 
-import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 
 function Footer() {
@@ -16,7 +15,7 @@ function Footer() {
         LinkeDin
       </Button>
       <br />
-      <small className="">© 2022 | Developed by Javier Giberg</small>
+      <small>© 2022 | Developed by Javier Giberg</small>
     </div>
   );
 }

@@ -57,9 +57,12 @@
   transition-duration: 1s;
   transform: scale(1.08);
 }
+
 .details_main{
   display: flex;
   flex-direction: column;
+  max-width: 700px;
+  
   margin-top: 50px;
   margin-bottom: 25px;
 padding: 5px;

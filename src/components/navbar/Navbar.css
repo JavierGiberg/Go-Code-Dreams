@@ -14,7 +14,16 @@ color: rgb(0, 0, 0);
  display: flex;
  text-align: right;    
 }
-
+.navbar_filter{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  
+}
+.navbar_filter small{
+margin: 15px;
+  
+}
 @media screen and (max-width: 568px) {
  .search-bar {
   display: none  
@@ -24,6 +33,10 @@ color: rgb(0, 0, 0);
        
   display: none;
 }
+.navbar_filter{
+  display: none;
 }
+}
+
 
 

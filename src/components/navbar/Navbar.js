@@ -33,13 +33,17 @@ function Navbar(props) {
 
           <Typography>CSS1</Typography>
         </Stack>
-
-        <select
-          className="search-bar"
-          onChange={(e) => props.select(e.target.value)}
-        >
-          <Filter filter={props.sortlist} />
-        </select>
+        <div className="navbar_filter">
+          <small>Filter Dreams </small>
+          <div>
+            <select
+              className="search-bar"
+              onChange={(e) => props.select(e.target.value)}
+            >
+              <Filter filter={props.sortlist} />
+            </select>
+          </div>
+        </div>
       </nav>
     </div>
   );

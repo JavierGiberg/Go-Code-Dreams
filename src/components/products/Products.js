@@ -41,7 +41,10 @@ function Products(props) {
             <img src={Maindata.image} alt="image" className="image_products" />
           </div>
           <div className="details_main_products">
-            <h4 className="dream_pack">Dream package [{Maindata.details}]</h4>
+            <h4 className="dream_pack">
+              <b>Dream package </b> <small>[{Maindata.details}]</small>
+            </h4>
+
             <h4 className="price_products">Price {Maindata.price}$</h4>
             <Button
               className="buy_button_products"

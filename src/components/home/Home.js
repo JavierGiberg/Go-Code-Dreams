@@ -44,7 +44,7 @@ function Home(props) {
       </div>
       <div className="main">
         <div className="main_title">
-          <h1 className="main_title_h1">Sell Dreams</h1>
+          <h1 className="main_title_h1">The Dreams</h1>
 
           <Button
             className="main_title_btn"

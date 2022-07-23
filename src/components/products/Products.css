@@ -18,7 +18,9 @@
     margin-top: 50px;
   }
 .details_main_products{
+  
   display: flex;
+  max-width: 350px;
   flex-direction: column;
   margin-top: 50px;
 }
