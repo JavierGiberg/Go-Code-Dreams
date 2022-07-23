@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { Button } from "@mui/material";
 function Navbar(props) {
   function cssRadio() {
     if (!props.css) {
@@ -15,23 +16,24 @@ function Navbar(props) {
 
   return (
     <div>
-      <nav className="nav">
+      <nav className="navbar_container">
         <h6 className="nav-brand">GoCode Dreams</h6>
 
-        <ul>
-          <li>
-            <Stack direction="row" spacing={1} alignItems="center">
-              <Typography>CSS2</Typography>
-              <AntSwitch
-                defaultChecked
-                inputProps={{ "aria-label": "ant design" }}
-                onClick={cssRadio}
-              />
+        <Button href="/" className="nav-link">
+          Chacnge Status
+        </Button>
 
-              <Typography>CSS1</Typography>
-            </Stack>
-          </li>
-        </ul>
+        <Stack direction="row" spacing={1} alignItems="center">
+          <Typography>CSS2</Typography>
+          <AntSwitch
+            defaultChecked
+            inputProps={{ "aria-label": "ant design" }}
+            onClick={cssRadio}
+          />
+
+          <Typography>CSS1</Typography>
+        </Stack>
+
         <select
           className="search-bar"
           onChange={(e) => props.select(e.target.value)}

@@ -69,10 +69,10 @@ function Main(props) {
                         />
                       </div>
                       <div className="details_main">
-                        <h4 className="main_dream_pack">
+                        <h2 className="main_dream_pack">
                           Dream package [{Maindata.details}]
-                        </h4>
-                        <h6 className="price">Price {Maindata.price}$</h6>
+                        </h2>
+                        <h4 className="price">Price {Maindata.price}$</h4>
 
                         <Button
                           variant="outlined"
@@ -80,7 +80,7 @@ function Main(props) {
                         >
                           Buy package
                         </Button>
-
+                        <br />
                         <Button variant="outlined" onClick={() => putwish()}>
                           add to whish list
                         </Button>

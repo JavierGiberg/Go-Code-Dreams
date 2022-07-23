@@ -18,7 +18,7 @@ function Profiles(props) {
             <div className="profile_item_pic-wrap">
               <img
                 className="profile_item_img"
-                alt="Image Status"
+                alt="images Status"
                 src={props.src}
               />
             </div>

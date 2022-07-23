@@ -1,119 +1,29 @@
-
-
-
-
-
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: large;
-}
-
-.nav {
+.navbar_container {
   display: flex;
   align-items: center;
-  
   justify-content: space-around;
   height: 10vh;
   padding: 0px;
-  
   flex: 1 100%;
- 
-  
 }
 
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
-  
+.nav-brand{
+color: rgb(0, 0, 0);
 }
-.nav-toggler {
+.search-bar {
+ display: flex;
+ text-align: right;    
+}
+
+@media screen and (max-width: 568px) {
+ .search-bar {
+  display: none  
+        
+ }
+ .nav-brand{
+       
   display: none;
 }
-.nav-toggler div {
-  width: 2.5rem;
-  height: 0.2rem;
-  margin: 0.4rem;
-  background: rgb(0, 0, 0);
-  transition: 0.3s ease-in;
-}
-.nav-brand{
-  color: rgb(0, 0, 0);
-  
-}
-@media screen and (max-width: 768px) {
-  .nav-toggler {
-    display: block;
-    cursor: pointer;
-    z-index: 3;
-  }
-  .nav-menu {
-  
-  }
-}
-
-.nav-active {
-  transform: translateX(0%);
-  
-}
-
-
-
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-4px, 5px);
-}
-.toggle .line2 {
-  opacity: 0;
-}
-.toggle .line3 {
-  transform: rotate(45deg) translate(-4px, -5px);
-}
-  
-
-
-  
-.nav-logo {
-  align-items: flex-end;
-   height: 10vmin;
-   
-}
-  
-@media (prefers-reduced-motion: no-preference) {
-  .nav-logo {
-    z-index: 3;
-    animation: nav-logo-spin infinite 20s linear;
-  }
-}
-  
-  
-  
-
-
-
-
-  .search-bar {
-    display: flex;
-    text-align: right;    
-  }
-.img-bar {
-    width: 25px;
-    padding: 5px;
-}
-@media screen and (max-width: 568px) {
-    .search-bar {
-        display: none  
-        
-      }
-      .nav-brand{
-       
-        display: none;
-      }
 }
 
 

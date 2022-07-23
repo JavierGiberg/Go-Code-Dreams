@@ -5,6 +5,7 @@ import Sidebar from "../sidebar/Sidebar";
 import Main from "../main/Main";
 import Products from "../products/Products";
 import AddDreams from "../addDreams/AddDreams";
+import Footer from "../footer/Footer";
 import { useState } from "react";
 import Pop from "../pop/Pop";
 import { Button } from "@mui/material";
@@ -64,6 +65,9 @@ function Home(props) {
       </div>
       <div className="slider">
         <Slider />
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );
