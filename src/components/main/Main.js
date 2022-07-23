@@ -51,7 +51,7 @@ function Main(props) {
 
   return (
     <div>
-      <section className="slider">
+      <section className="slider_main">
         <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
         <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
         <div>

@@ -1,5 +1,5 @@
 import "./Home.css";
-import Footer from "../footer/Footer";
+import Slider from "../slider/Slider";
 import Navbar from "../navbar/Navbar";
 import Sidebar from "../sidebar/Sidebar";
 import Main from "../main/Main";
@@ -50,7 +50,7 @@ function Home(props) {
               AddDreamsFun();
             }}
           >
-            Add you Dreams <Icon color="primary">add_circle</Icon>{" "}
+            Add you Dreams <Icon color="primary">add_circle</Icon>
           </Button>
         </div>
         <div className="item_main_product">
@@ -61,8 +61,8 @@ function Home(props) {
           )}
         </div>
       </div>
-      <div className="footer">
-        <Footer />
+      <div className="slider">
+        <Slider />
       </div>
     </div>
   );
