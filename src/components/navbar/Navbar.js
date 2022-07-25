@@ -51,7 +51,7 @@ function Navbar(props) {
 
 function Filter(props) {
   return props.filter.map((colle, index) => (
-    <option key={index} value={colle.title}>
+    <option key={index} value={colle.collection}>
       {colle.collection}
     </option>
   ));
