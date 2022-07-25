@@ -17,7 +17,7 @@ function AddDreams(props) {
         <div className="AddDreams_title">
           <h3>Your Dream</h3>
           <div className="AddDreams_list">
-            <ul>
+            <ul className="AddDreams_list_ul">
               <li>
                 *<input id="src" placeholder="Enter Url image"></input>
               </li>
@@ -48,21 +48,24 @@ function AddDreams(props) {
           </button>
           <button
             onClick={() => {
-              const a = document.getElementById("src").value;
-              const b = document.getElementById("details").value;
-              const c = document.getElementById("category").value;
-              const d = document.getElementById("price").value;
-
-              props.setMain([
-                ...props.Maindata,
-                {
-                  image: a,
-                  price: b,
-                  category: c,
-                  details: d,
-                },
-              ]);
-              props.setAddToDreams(false);
+              const image = document.getElementById("src").value;
+              const price = document.getElementById("price").value;
+              const category = document.getElementById("category").value;
+              const details = document.getElementById("details").value;
+              if (!image || !price || !category || !details === null) {
+                alert("You must fill in all fields");
+              } else {
+                props.setMain([
+                  ...props.Maindata,
+                  {
+                    image: image,
+                    price: price,
+                    category: category,
+                    details: details,
+                  },
+                ]);
+                props.setAddToDreams(false);
+              }
             }}
           >
             Add

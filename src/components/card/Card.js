@@ -26,6 +26,7 @@ function Card(props) {
         <img src={props.image} />
       </div>
       <h3>{props.category}</h3>
+      <small>{props.details}</small>
       <div className="card_side_btn">
         <Button
           onClick={() => deleteCard(props)}

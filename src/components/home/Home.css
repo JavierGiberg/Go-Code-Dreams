@@ -24,15 +24,17 @@
     box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    
+    margin-top: 15px;
+    max-width: 370px;
+    min-width: 370px;
 }
 .slider {
-    
+     
     box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
- 
-height: 150px;
+    margin-top: 15px;
+  height: 150px;
   display: grid;
   place-items: center;
   
@@ -41,15 +43,16 @@ height: 150px;
 .main {
     display: flex;
     align-content: center;
-    
-    box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
+    width: 100%;
+ 
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.821);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(255, 255, 255, 0.017));
 }
 .footer {
     display: flex;
     align-content: center;
-    
+    margin-top: 15px;
     box-shadow: 0 6px 20px rgba(0, 21, 255, 0.821);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
