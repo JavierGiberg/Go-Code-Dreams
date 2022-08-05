@@ -1,6 +1,6 @@
 import React from "react";
 import "./Pop.css";
-
+//Developed by Javier Giberg
 function Pop(props) {
   return (
     <div className="Pop_Background">

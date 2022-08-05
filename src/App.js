@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.css"; //Developed by Javier Giberg
 import Home from "./components/home/Home";
 import { UserContext } from "./components/context/ProdactContex";
 import Profile from "./components/profile/Profile";

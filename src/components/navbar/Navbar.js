@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { styled } from "@mui/material/styles";
-
+//Developed by Javier Giberg
 import Switch from "@mui/material/Switch";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";

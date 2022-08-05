@@ -2,7 +2,7 @@ import "./Profile.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../context/ProdactContex";
-
+//Developed by Javier Giberg
 function Profiles(props) {
   const { setSidePro } = useContext(UserContext);
 

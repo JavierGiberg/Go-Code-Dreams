@@ -1,6 +1,6 @@
 import "./Profile.css";
 import Profiles from "./Profiles";
-
+//Developed by Javier Giberg
 function Profile(props) {
   return (
     <div className="profile_container">

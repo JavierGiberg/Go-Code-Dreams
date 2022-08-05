@@ -3,29 +3,29 @@
     "src": "student.jpg",
     "text": "Student",
     "path": "/home",
-    "bank": 50,
+    "bank": 500,
     "sound":"Fail.mp4"
   },
   {
     "src": "junior.png",
     "text": "Junior",
     "path": "/home",
-    "bank": 500,
-    "sound":"Applause.mp3"
+    "bank": 5000,
+    "sound":"Fail.mp4.mp3"
     
   },
   {
     "src": "senior.jpg",
     "text": "Senior",
     "path": "/home",
-    "bank": 5000,
-    "sound":"Applause.mp3"
+    "bank": 50000,
+    "sound":"Fail.mp4.mp3"
   },
   {
     "src": "gocode.jpg",
     "text": "GoCode",
     "path": "/home",
-    "bank": 50000,
+    "bank": 5000000000,
     "sound":"Applause1.mp3"
     
   }]

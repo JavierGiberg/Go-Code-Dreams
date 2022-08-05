@@ -2,7 +2,7 @@ import React from "react";
 import "./Slider.css";
 import Image from "./Image";
 import { Link } from "react-router-dom";
-
+//Developed by Javier Giberg
 function Slider() {
   return (
     <div className="slider_container">

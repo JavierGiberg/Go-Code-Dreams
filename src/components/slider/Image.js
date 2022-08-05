@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Slider.css";
-
+//Developed by Javier Giberg
 import { UserContext } from "../context/ProdactContex";
 
 function Image() {

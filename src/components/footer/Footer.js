@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-
+//Developed by Javier Giberg
 import { Button } from "@mui/material";
 
 function Footer() {

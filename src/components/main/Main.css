@@ -71,15 +71,6 @@ padding: 5px;
   border-top:20px solid rgba(0, 21, 255, 0.821) ;
   border-bottom:20px solid rgba(0, 21, 255, 0.821) ;
 }
-.price{
- 
-}
-.buy_button{
-  
-}
-.whish_button{
-
-}
 
 @media screen and (min-width:800px) {
   .image {
