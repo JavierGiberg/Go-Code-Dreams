@@ -1,6 +1,5 @@
 .card_side_container{
     display: flex;
-    /* position: relative; */
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -21,7 +20,5 @@
     padding: 10px;
 }
 .card_side_btn  {
-   
     margin-bottom: 5px;
-  
 }

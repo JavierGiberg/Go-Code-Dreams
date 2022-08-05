@@ -17,6 +17,7 @@ function Main(props) {
     if (e.price <= bank) {
       setpackabuy(packabuy + 1);
       setBank(bank - e.price);
+      new Audio("Buying.mp3").play();
       setCard([
         ...card,
         {

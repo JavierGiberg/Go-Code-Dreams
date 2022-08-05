@@ -7,18 +7,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [profile, setProfile] = useState([]);
-  const [sidePro, setSidePro] = useState([]);
+  const [profile, setProfile] = useState([]); //State to => Profile && Home
+  const [sidePro, setSidePro] = useState([]); // to => Home => Sidebar
 
-  const [Maindata, setMain] = useState([]);
-  const [packabuy, setpackabuy] = useState(0);
-  const [wish, setWish] = useState(0);
-  const [bank, setBank] = useState(0);
-  const [productTemp, setListTemp] = useState([]);
-  const [selected, setSelected] = useState("All-Package");
-  const [card, setCard] = useState([]);
+  const [Maindata, setMain] = useState([]); //State to => Home = > Main && Products && Sidebar
+  const [packabuy, setpackabuy] = useState(0); //State to => Home => Main && Products && Sidebar
+  const [wish, setWish] = useState(0); //State to => Home => Main && Products && Sidebar
+  const [bank, setBank] = useState(0); //State to => Home => Main && Products && Sidebar
+  const [productTemp, setListTemp] = useState([]); //State to => Home => Main && Products && Sidebar
+  const [selected, setSelected] = useState("All-Package"); //State to => Home => Main && Products && Navbar
+  const [card, setCard] = useState([]); //State to => Home => Main && Products && Sidebar
 
   const [sortlist] = useState([
+    //state for filter product & MainPro
     {
       collection: "All-Package",
     },
@@ -37,6 +38,7 @@ function App() {
   ]);
 
   useEffect(() => {
+    //fech from server
     fetch("http://localhost:8000/profile")
       .then((res) => res.json())
       .then((colle) => {
@@ -45,6 +47,7 @@ function App() {
   });
 
   useEffect(() => {
+    //fech from server
     fetch("http://localhost:8000/products")
       .then((res) => res.json())
       .then((colle) => {
@@ -54,11 +57,13 @@ function App() {
   }, []);
 
   function select(e) {
+    //fuc for filter
     setSelected(e);
     Filter(e);
   }
 
   const Filter = (category) => {
+    //fuc  filter
     let temp = productTemp;
     if (!(category === "All-Package")) {
       temp = productTemp.filter((pordu) => pordu.category === category);
